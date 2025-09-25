@@ -389,14 +389,8 @@ function reverseWords(str) {
  *   invertCase('12345') => '12345'
  */
 function invertCase(str) {
-  // eslint-disable-next-line consistent-return
   return str.replace(/\w/g, (w) => {
-    if (w === w.toUpperCase()) {
-      return w.toLowerCase();
-    }
-    if (w === w.toLowerCase()) {
-      return w.toUpperCase();
-    }
+    return w === w.toUpperCase() ? w.toLowerCase() : w.toUpperCase();
   });
 }
 
